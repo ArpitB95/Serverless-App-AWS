@@ -40,8 +40,12 @@
 - Monitoring and logging: The framework integrates with popular monitoring and logging services, making it easier to monitor the performance, errors, and logs of your serverless applications.
 
 
-### In this project, I have deployed a task_master_app on AWS with serverless and lambda function. I have used Windows machine in this project.
+### In this project, I have deployed a task_master_app on AWS with serverless framework and deployed lambda function and dynamodb table. I have used Windows machine in this project.
+
+- The Serverless Framework provisions the necessary AWS resources for your application based on your configuration. This can include creating and configuring resources such as API Gateway, S3 buckets, event triggers, IAM roles, and more
 - Serverless eliminates the maintanance of instances and only runs when needed so also eliminates the cost.
+- Integration with other AWS services: The Serverless Framework integrates with various AWS services, such as CloudFormation, CloudWatch, X-Ray, and more, to provide a seamless experience in managing and monitoring your serverless applications.
+
 
 
 ## STEPS:
@@ -147,31 +151,56 @@ resources:
   ![serverless login](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/9cb55a57-dc0f-4a9e-9514-b03112edc998)
 
 
+
+
+
 - Open the given link in browser, you should get this login page
+
+
 
 
   ![serverless cli login](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/1ae3818a-30f3-4f09-9829-058193fd396c)
 
 
+
+
 - Now, go to your serverless dashboard and go to apps --> create app --> existing project
+
+
 
   ![app1](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/f06b6c7a-2697-4012-826e-67fbf8fd29fe)
 
 
+
+
+
+
   Now run the shown command in the terminal
+
+
+
+
 
 
   ![Inkedapp2](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/7d21adde-c43c-4bfd-966a-2fddeccd69c9)
 
 
 
+
+
   ![sls org](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/96fccc09-24ae-44a3-bc2e-5085582b0543)
+
+
 
 
 - Run "serverless deploy"
 
 
+
+
   ![sls deploy](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/72440601-9b02-48ff-8626-164ad0176a8c)
+
+
 
 
  ### Congratulations! Your app has been deployed.
