@@ -218,6 +218,11 @@ resources:
             
 
 
+## To remove the stake run
+
+```
+sls remove
+```
        
 
   
