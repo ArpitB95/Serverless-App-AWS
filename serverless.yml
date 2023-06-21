@@ -1,0 +1,60 @@
+org: arpit95
+app: serverless-taskmaster-app
+service: serverless-taskmaster-app
+
+provider:
+  name: aws
+  region: eu-west-2
+  runtime: nodejs14.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:eu-west-2:683873876613:table/KaamKaro
+functions:
+  hello:
+    handler: src/hello.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+  KaamBharo:
+    handler: src/KaamBharo.handler
+    events:
+      - httpApi:
+          path: /KaamBharo
+          method: get
+
+  KaamDikhao:
+    handler: src/KaamDikhao.handler
+    events:
+      - httpApi:
+          path: /KaamDikhao
+          method: get
+
+  KaamKhatamKaro:
+    handler: src/KaamKhatamKaro.handler
+    events:
+      - httpApi:
+          path: /KaamKhatamKaro
+          method: get
+
+resources:
+  B
+  Resources:
+    KaamKaro:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: KaamKaro
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+
+          
+            
