@@ -17,28 +17,34 @@
   
 - Install NPM (npm comes with node.js package installer)
   Check version
-  - node -- version
-  - npm - version
+```
+   node -- version
+   npm - version
+```
     
 - Install Serverless Framework
-  '''
+  Create an account on
+  https://app.serverless.com/?view=register
+
+  Now, run this command to install serverless
+  ```
   npm install -g serverless
-  '''
+  ```
   
 - Install AWS CLI
   https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
   
 - Configure AWS
-  '''
+  ```
   aws configure
-  '''
+  ```
   - Insert your AWS Access key and Secret key.
     
 - Create serverless.yml file
 
-"""
-  org: arpit95
+```
+org: your serverless framework account name
 app: serverless-taskmaster-app
 service: serverless-taskmaster-app
 
@@ -51,7 +57,7 @@ provider:
       Action:
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb:eu-west-2:683873876613:table/KaamKaro
+        - arn:aws:dynamodb:eu-west-2:aws account number:table/KaamKaro
 functions:
   hello:
     handler: src/hello.handler
@@ -93,8 +99,55 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH
-"""
-          
+```
+
+- Login to your serverless by running
+  
+  ```
+  serverless login
+  ```
+
+
+  ![serverless login](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/9cb55a57-dc0f-4a9e-9514-b03112edc998)
+
+
+- Open the given link in browser, you should get this login page
+
+
+  ![serverless cli login](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/1ae3818a-30f3-4f09-9829-058193fd396c)
+
+
+- Now, go to your serverless dashboard and go to apps --> create app --> existing project
+
+  ![app1](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/f06b6c7a-2697-4012-826e-67fbf8fd29fe)
+
+
+  Now run the shown command in the terminal
+
+
+  ![Inkedapp2](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/7d21adde-c43c-4bfd-966a-2fddeccd69c9)
+
+
+
+  ![sls org](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/96fccc09-24ae-44a3-bc2e-5085582b0543)
+
+
+- Run "serverless deploy"
+
+
+  ![sls deploy](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/72440601-9b02-48ff-8626-164ad0176a8c)
+
+
+ ### Congratulations! Your app has been deployed.
+
+ - Go to AWS account and check the CloudFormation stack
+   ![cloudformation stack-whole](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/e8bf1a83-2f8e-43a5-92b1-d70c0006c636)
+
+   
+### serverless will automatically create S3 bucket to store it's state file and maintain versions there.
+
+![DeploymentArchitecture](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/a930a35e-be05-4a70-a2be-cf445b6f149a)
+
             
 
 
