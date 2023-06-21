@@ -1,4 +1,4 @@
-org: arpit95
+org: serverless framework account name
 app: serverless-taskmaster-app
 service: serverless-taskmaster-app
 
@@ -11,7 +11,7 @@ provider:
       Action:
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb:eu-west-2:683873876613:table/KaamKaro
+        - arn:aws:dynamodb:eu-west-2:AWS account number:table/KaamKaro
 functions:
   hello:
     handler: src/hello.handler
