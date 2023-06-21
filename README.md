@@ -141,7 +141,9 @@ resources:
  ### Congratulations! Your app has been deployed.
 
  - Go to AWS account and check the CloudFormation stack
-   ![cloudformation stack-whole](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/e8bf1a83-2f8e-43a5-92b1-d70c0006c636)
+   
+   ![cloudformation stack](https://github.com/ArpitB95/Serverless_App_AWS/assets/110182832/683c1e65-805c-4c5f-bc60-feae50e2f7ae)
+
 
    
 ### serverless will automatically create S3 bucket to store it's state file and maintain versions there.
